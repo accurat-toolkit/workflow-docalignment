@@ -1,0 +1,6 @@
+G:\RuntimeTempDir\Toolkit\TempForFull\D2_6_Section_1_GeneralWorkflows\D2_6_Section_1_2_docalignment\test\EN\Abraham_Stoker_EN.txt
+G:\RuntimeTempDir\Toolkit\TempForFull\D2_6_Section_1_GeneralWorkflows\D2_6_Section_1_2_docalignment\test\EN\Acheron_EN.txt
+G:\RuntimeTempDir\Toolkit\TempForFull\D2_6_Section_1_GeneralWorkflows\D2_6_Section_1_2_docalignment\test\EN\Caucasian_language_EN.txt
+G:\RuntimeTempDir\Toolkit\TempForFull\D2_6_Section_1_GeneralWorkflows\D2_6_Section_1_2_docalignment\test\EN\Central_Powers_EN.txt
+G:\RuntimeTempDir\Toolkit\TempForFull\D2_6_Section_1_GeneralWorkflows\D2_6_Section_1_2_docalignment\test\EN\Emily_Bronte_EN.txt
+G:\RuntimeTempDir\Toolkit\TempForFull\D2_6_Section_1_GeneralWorkflows\D2_6_Section_1_2_docalignment\test\EN\Namib_Desert_EN.txt

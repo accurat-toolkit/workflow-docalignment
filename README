@@ -1,0 +1,35 @@
+This directory contains all the resources and the tools that compose the "Document Alignment Workflow" described in the ACCURAT deliverable D2.6. Version 3.
+The present bundle is compiled ONLY FOR Windows systems (!) and contains the following tools:
+
+Requirements:
+- 'perl' and 'java' must be in the %PATH%.
+- IT IS STRONGLY RECOMMENDED that for EMACC, the user edits the cluster.info  (see D2.6 for that) file and run on multiple CPU cores since the algorithm is CPU intesive.
+- be sure to use the environment variable USER to your user in cmd.exe! That is, 'echo %USER%' MUST NOT BE VOID! GIZA++ breaks if this does not happen.
+
+1. CTS ComMetric "document aligner" application (ComMetric). Files belonging to this application are (directory 'commetric\'):
+	- ComMetric.jar
+	- en-stopwords.txt
+
+2. CTS DictMetric "document aligner" application (DicMetric). Files belonging to this application are (directory 'dicmetric\'):
+	- DicMetric.jar
+	- 'dict\' directory
+	- 'stopwords\' directory
+
+6. RACAI "document aligner" application (EMACC). Files belonging to this application are (directory 'emacc-pexacc-lexacc\'):
+	- emacc2.pl, precompworker.pl, emaccconf.pm, hddmatrix.pm
+	- cluster.info
+	- 'dict\' and 'res\' directories
+
+7. USFD "document aligner" application (Feature-based Document pair classifier). Files belonging to this application are:
+	- all files in the 'featclass\' directory.
+	- featclass.bat
+
+Files in the root of the arhive that MUST NOT be deleted:
+	- en-stopwords.txt
+	- DocumentAlignment.*
+	- all directories
+
+In order to run the workflow, please edit ONLY the 'DocumentAlignment.prop' for configuration and run 'DocumentAlignment.pl'.
+Get usage information of 'DocumentAlignment.pl' by executing it without command line arguments.
+
+IMPORTANT: Do not delete ANY files other than those produced by 'DocumentAlignment.pl' !!

@@ -1,0 +1,17 @@
+#hostname<TAB>IP<TAB>CPUID
+## is a comment
+#'hostname' ran on my Windows 7 box returned 'sunny'.
+#I have a 2-core processor.
+#I do not want to run on a cluster.
+#If I did, I would have had other hosts here and remote IPs.
+
+TLD107	127.0.0.1	cpu0
+TLD107	127.0.0.1	cpu1
+TLD107	127.0.0.1	cpu2
+TLD107	127.0.0.1	cpu3
+TLD107	127.0.0.1	cpu4
+TLD107	127.0.0.1	cpu5
+TLD107	127.0.0.1	cpu6
+TLD107	127.0.0.1	cpu7
+TLD107	127.0.0.1	cpu8
+TLD107	127.0.0.1	cpu9

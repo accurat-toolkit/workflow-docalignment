@@ -1,0 +1,156 @@
+﻿Languages of the Caucasus - Wikipedia, the free encyclopedia
+Languages of the Caucasus
+From Wikipedia, the free encyclopedia
+(Redirected from Caucasian language)
+Jump to: navigation, search
+This article does not cite any references or sources.
+Please help improve this article by adding citations to reliable sources. Unsourced material may be challenged and removed. (December 2006)
+Ethno-Linguistic groups in the Caucasus region
+The languages of the Caucasus are a large and extremely varied array of languages spoken by more than ten million people in and around the Caucasus Mountains, which lie between the Black Sea and the Caspian Sea.
+Linguistic comparison allows these languages to be classified into several language families, with little or no discernible affinity to each other.
+Contents
+1 Families indigenous to the Caucasus
+1.1 External relations
+1.1.1 North Caucasian languages
+1.1.2 Ibero-Caucasian languages
+1.1.3 Hattic
+1.1.4 Alarodian
+1.1.5 Dené-Caucasian macrofamily
+2 Families with wider distribution
+2.1 Indo-European
+2.2 Altaic
+2.3 Semitic
+3 References
+4 Notes
+5 External links
+ Families indigenous to the Caucasus
+Three of these families have no current members outside the Caucasus, and are considered indigenous to the area. The term Caucasian languages is generally restricted to these families.
+South Caucasian, also called the Kartvelian family. Includes Georgian, the official language of Georgia, with four million speakers.
+Northwest Caucasian, also called the Abkhaz-Adyghe, Circassian, or Pontic family. Includes the Kabardian language, with one million speakers.
+Northeast Caucasian, also called the Dagestanian, Nakho-Dagestanian, or Caspian family. Includes the Chechen language, Avar language, Ingush language, Lezgian language, and others. With three million speakers.
+It is commonly believed that all Caucasian languages have a large number of consonants. While this is certainly true for most members of the Northwest and Northeast Caucasian families (inventories range up to the 80-84 consonants of Ubykh), the consonant inventories of the South Caucasian languages are not nearly as extensive, ranging from 28 (Georgian) to 30 (Laz) — comparable to languages like Arabic (28 consonants), Western European languages (20-21), and Russian (35-37 consonants).
+The autochthonous languages of the Caucasus share some areal features, such as the presence of ejective consonants and a highly agglutinative structure, and, with the sole exception of Mingrelian, all of them exhibit a greater or lesser degree of ergativity. Many of these features are shared with other languages that have been in the Caucasus for a long time, such as Ossetian.
+ External relations
+Since the birth of comparative linguistics in the 19th century, the riddle of the apparently isolated Caucasian language families has attracted the attention of many scholars, who have endeavored to relate them to each other or to languages outside the Caucasus region. The most promising proposals are connections between the Northwest and Northeast Caucasian families and each other or with languages formerly spoken in Anatolia and northern Mesopotamia.
+ North Caucasian languages
+Main article: North Caucasian languages
+Linguists such as Sergei Starostin see the Northwest (Abkhaz-Adyghe) and Northeast (Nahk-Dagestanian) families as related and propose uniting them in a single North Caucasian family, sometimes called Caucasic or simply Caucasian. This theory excludes the South Caucasian languages, thereby proposing two indigenous language families. While these two families share many similarities, their morphological structure, with many morphemes consisting of a single consonant, make comparison between them unusually difficult, and it has not been possible to establish a genetic relationship with any certainty.
+ Ibero-Caucasian languages
+Main article: Ibero-Caucasian languages
+There are no known affinities between the South Caucasian and North Caucasian families. Nevertheless, some scholars have proposed the single name Ibero-Caucasian for all the Caucasian language families, North and South, in an attempt to unify the Caucasian languages under one family.
+ Hattic
+Some linguists have claimed affinities between the Northwest Caucasian (Circassian) family and the extinct Hattic language of central Anatolia. See the article on Northwest Caucasian languages for details.
+ Alarodian
+Alarodian is a proposed connection between Northeast Caucasian and the extinct Hurro-Urartian languages of Armenia.
+ Dené-Caucasian macrofamily
+Main article: Dené-Caucasian languages
+Linguists such as Sergei Starostin have proposed a Dené-Caucasian macrofamily, which includes the North Caucasian languages together with Basque, Burushaski, Na-Dené, Sino-Tibetan, and Yeniseian. Most linguists consider this proposal to be beyond the range of historical linguistics.
+ Families with wider distribution
+Other languages historically and currently spoken in the Caucasus area can be placed into families with a much wider geographical distribution.
+ Indo-European
+The predominant Indo-European language in the Caucasus is Armenian, spoken by the Armenians (circa 4 million speakers). The Ossetians, speaking the Ossetic language, form another group of around 700,000 speakers. Other Indo-European languages spoken in the Caucasus include Persian, Greek, Pontic, Kurdish, Talysh, Judeo-Tat, Bukhori and of the Slavic languages, Russian and Ukrainian, whose speakers number over a third of the total population of the Caucasus.
+ Altaic
+Most of the Altaic languages spoken in the Caucasus are Turkic: of these, Azerbaijani is predominant, with around 6 million speakers in Azerbaijan. Other Turkic languages spoken include Balkar, Karachay, Kumyk, Nogai.
+Kalmyk, spoken by the Oirat descendant Kalmyks in the region is a Mongolic language.
+ Semitic
+The only Semitic language spoken in the Caucasus is Assyrian Neo-Aramaic, spoken by around 25,000 speakers, largely living in cities, who fled to Russia from Turkish persecution at the close of the First World War.
+ References
+Encyclopedia Britannica, 15th edition (1986): Macropedia, "Languages of the World", see section titled "Caucasian languages".
+ Notes
+ External links
+A nice map depicting the languages in the Caucasus: http://www.hunmagyar.org/turan/caucasus/index.html
+TITUS: Caucasian languages map by Jost Gippert projects Armazi Ecling
+CIA ethnolinguistic map
+Linguistic families map by Matthew Dryer
+Caucausian Dictionary
+Caucausian section of the Red Book of the Peoples of the Russian Empire
+The Iberian-Caucasian Connection in a Typological Perspective — An in-depth linguistic study of Basque, Georgian, and other ergative languages, concluding that the similarities are not strong enough to prove a genetic link.
+The A. Chikobava Institute of Linguistics, Georgian Academy of Sciences
+Atlas of the Caucasian Languages with very detailed Language Guide (by Yuri B. Koryakov)
+The Graphic Model and the Maps of the Urheimat of the North Caucasian and Abkhaz-Adyghean Languages
+Comparative Notes on Hurro-Urartian, Northern Caucasian and Indo-European by V. V. Ivanov
+<!--
+NewPP limit report
+Preprocessor node count: 388/1000000
+Post-expand include size: 5069/2048000 bytes
+Template argument size: 1935/2048000 bytes
+Expensive parser function count: 1/500
+-->
+Retrieved from "http://en.wikipedia.org/wiki/Languages_of_the_Caucasus"
+Categories: Languages of the CaucasusHidden categories: Articles lacking sources from December 2006 | All articles lacking sources
+Views
+Article
+Discussion
+Edit this page
+History
+Personal tools
+Try Beta
+Log in / create account
+Navigation
+Main page
+Contents
+Featured content
+Current events
+Random article
+Search
+Interaction
+About Wikipedia
+Community portal
+Recent changes
+Contact Wikipedia
+Donate to Wikipedia
+Help
+Toolbox
+What links here
+Related changes
+Upload file
+Special pages
+Printable version Permanent linkCite this page
+Languages
+Aragonés
+Asturianu
+Azərbaycan
+Brezhoneg
+Български
+Català
+Česky
+Dansk
+Deutsch
+Eesti
+Español
+Esperanto
+Français
+Frysk
+Gaeilge
+Italiano
+עברית
+ქართული
+Latina
+Lietuvių
+Líguru
+Magyar
+Македонски
+Nederlands
+日本語
+‪Norsk (bokmål)‬
+‪Norsk (nynorsk)‬
+Polski
+Português
+Română
+Русский
+Simple English
+Српски / Srpski
+Suomi
+Svenska
+ไทย
+Türkçe
+Українська
+中文
+This page was last modified on 31 January 2010 at 15:16.
+Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.
+See Terms of Use for details.
+Wikipedia is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.Contact us
+Privacy policy
+About Wikipedia
+Disclaimers

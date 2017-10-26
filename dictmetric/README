@@ -1,0 +1,140 @@
+DictMetric: a toolkit for measuring comparability of comparable documents
+
+1. Overview and purpose of this toolkit
+This toolkit (DictMetric) is designed to measure the comparability levels of document pairs via cosine measure. The toolkit can compute comparability scores for both monolingual document pairs or bi-lingual document pairs. Overall, the toolkit contains two modules: text translation by lexical mapping and cosine-based comparability computation.  
+
+2. Software dependencies and system requirements
+
+(1) WordNet: the toolkit uses WordNet in a WordNet-based English word stemmer. WordNet is available at http://wordnet.princeton.edu/wordnet/download/current-version/, the latest versions are WordNet 2.1 for Windows, and WordNet 3.0 for Unix-like system. 
+
+(2) JWI: the toolkit uses MIT Java Wordnet Interface (JWI, available at http://projects.csail.mit.edu/jwi/) to access WordNet for a WordNet-based word stemming. Not like the traditional word stemmer which return the stem form of a word (the stems are usually not words), the WordNet-based stemmer will check if possible stems are in the WordNet. If so, it will only return these WordNet-based stems; and if not it will return the traditional stem form. Since most of the stems are words, the WordNet-based stemming is like a simple word lemmatization tool (which returns lemma of a given word). 
+
+(3) Stanford POS-tagger: the toolkit use Standford POS-tagger (available at http://nlp.stanford.edu/software/tagger.shtml) for POS-tagging and word tokenization.
+
+(4) System platform: platform independent (Windows, Linux or Mac)
+
+(5) JRE: JRE 1.6.0 (lower version should also work)
+
+(6) Stopword list: stopword lists for ACCURAT languages, which are already included in the toolkit
+
+(7) Bilingual dictioanry: GIZA++ based bilingual dictionaries for ACCURAT language pairs, which are included in the toolkit. 
+
+3. System modules
+
+(1) Text translation
+The toolkit supports two types of text translation. First, for non-English and English language pairs (e.g., RO-EN), we transated the non-English texts (RO) into English by using lexical mapping from the available GIZA++ based bilingual dictionaries. Second, for non-English language pairs (e.g., EL-RO or RO-DE), the toolkit can either translate Greek (or Romanian) texts into Romanian (or German) using el-ro (or ro-de) dictionary; or it can also translate both Greek and Romanian texts into English using el-en and ro-en dictionaries and the subsequent comparability measure is thus based on English. 
+
+(2) Comparability computation
+The toolkit first call Standford POS-tagger (available at http://nlp.stanford.edu/software/tagger.shtml) for POS-tagging and word tokenization. Then JWI (MIT Java Wordnet Interface) is called for WordNet-based English word stemming. After word stemming for English langauges, the stemmed text are converted into index vectors. If the translated texts are not in English, then word stemming step will be skipped and directly go into feature vector conversion. Finally, the toolkit computes the comparability score of document pairs by applying cosine similarity measure on the index vectors. Document pairs with a cosine score >=threshold (a predefined value, between 0-1) are returned as output. 
+
+4. Installation
+(1) WordNet installation: download the latest WordNet version (Windows or Unix-like system) and install it. Record the path to the root of the Wordnet installation directory (For example, "/usr/local/WordNet-3.0" for linux, and "C:\WordNet-2.1" for Windows) and the dictionary data directory "dict" (the toolkit mainly uses the WordNet data in the "dict" directory) must be appended to this path (for example, "/usr/local/WordNet-3.0/dict", and "C:\WordNet-2.1\dict"). This might be different on your system, depending on where the WordNet files are located. 
+
+(2) JRE installation: download and install windows-based or linux-based JREs, depending what system you use.
+
+5.  Quick Start:
+
+(1) Usage: 
+java -jar DictMetric.jar --source SourceLanguage --target TargetLanguage --WN Path2WordNet --threshold value --input path2SourceFileList --input path2TargetFileList --output path2result --tempDir path2TemporaryDirectory --option [0|1]
+
+(2) Parameter description
+--source SourceLanguage: Non-English language
+--target TargetLanguage: any supported language by translation API
+--WN path2WordNet: the full path to the WordNet installation directory
+--threshold value: output the document pairs with a comparability score >= threshold (between 0-1)
+--input path2SourceFileList: path to the file that lists the full path to the documents in source language
+--input path2TargetFileList: path to the file that lists the full path to the documents in target language
+--output path2result: path to the file that store comparable document pairs with comparability scores
+--tempDir path2TemporaryDirectory: specify a path to a temporary directory (must exist) for storing intermediate outputs 
+--option [0|1]: translate the non-English text into English (option=1) or not (opition=0), applied to non-English language pairs
+
+(3) Examples
+
+Linux:
+(1) non-English and English language pairs
+java -jar DictMetric.jar --source latvian --target english --WN /home/fzsu/WordNet-3.0 --threshold 0.1 --input /home/fzsu/DictMetric/sample/lv.txt --input /home/fzsu/DictMetric/sample/en.txt --output /home/fzsu/DictMetric/sample/result.txt --tempDir /home/fzsu/DictMetric/sample/temp --option 0
+
+(2) non-English language pairs
+java -jar DictMetric.jar --source greek --target romanian --WN /home/fzsu/WordNet-3.0 --threshold 0.1 --input /home/fzsu/DictMetric/el-ro/el.txt --input /home/fzsu/DictMetric/el-ro/ro.txt --output /home/fzsu/DictMetric/el-ro/result.txt --tempDir /home/fzsu/DictMetric/el-ro/temp --option 0
+
+(3) non-English language pairs
+java -jar DictMetric.jar --source greek --target romanian --WN /home/fzsu/WordNet-3.0 --threshold 0.1 --input /home/fzsu/DictMetric/el-ro/el.txt --input /home/fzsu/DictMetric/el-ro/ro.txt --output /home/fzsu/DictMetric/el-ro/result.txt --tempDir /home/fzsu/DictMetric/el-ro/temp --option 1
+
+Windows:
+java -jar DictMetric.jar --source latvian --target english --WN C:\WordNet\2.1 --threshold 0.1 --input C:\DictMetric\sample\lv.txt --input C:\DictMetric\sample\en.txt --output C:\DictMetric\sample\result.txt --tempDir C:\DictMetric\sample\temp --option 0
+
+
+The above command example (1) first translates Latvian documents listed in "lv.txt" in English and creates a folder called "LATVIAN-translation" in the directory "temp" to store the translated documents. A file called "LATVIAN-translation.txt" which lists full path to all the translated documents is also generated in the directory "temp". In addition, the stemmed data by word stemming process, and word and index vectors from text-to-vector process are stored in the directory "temp" as well. Finally, the toolkit computes comparability, and a document called "result.txt" which listed document pairs with comparability score >=threshold is generated in the specified path "/home/fzsu/DictMetric/sample/result.txt". 
+
+For non-English language pairs, example (2) will translate texts in source language (Greek) into target language (Romanian, non-English), later only stopword filtering will be applied on the translated text and target language texts (both in Romanian now), as word lemmatization is not publically available for Non-English languages. Example (3) will translate both source and target language texts into English, so both stopword filtering and word lemmatization will be further applied on the translated texts.   
+
+6. Input/output data formats
+
+(1) Input
+For the corpus, all the documents should be UTF-8 encoded, and in plain text. 
+
+Also, two files (such as "lv.txt" and "en.txt" in the above example) which lists full path to documents in source language and target document should be available. In these two files, each line stores the full path to a document. 
+
+For example, the format of "lv.txt" in Linux is as below:
+/home/fzsu/DictMetric/sample/LV/agriculture_lv.txt
+/home/fzsu/DictMetric/sample/LV/alcohol_lv.txt
+/home/fzsu/DictMetric/sample/LV/cystitis_lv.txt
+/home/fzsu/DictMetric/sample/LV/hockey3_lv.txt
+/home/fzsu/DictMetric/sample/LV/instruction7_lv.txt
+
+
+In windows, its format is as below:
+C:\DictMetric\sample\LV\agriculture_lv.txt
+C:\DictMetric\sample\LV\alcohol_lv.txt
+C:\DictMetric\sample\LV\cystitis_lv.txt
+C:\DictMetric\sample\LV\hockey3_lv.txt
+C:\DictMetric\sample\LV\instruction7_lv.txt
+
+
+(2) Output
+The final output file which lists document pairs with comparability scores is specified by the "--output" parameter. So in the above example, the result will be store in the file "result.txt". In this file, each line stores a pair of documents (full path to the documents) and the corresponding comparability score, separated by <TAB>. 
+
+For example, the format of "result.txt" is as below:
+/home/fzsu/DictMetric/sample/LV/instruction7_lv.txt<tab>/home/fzsu/DictMetric/sample/EN/instruction7_en.txt<tab>0.2352
+/home/fzsu/DictMetric/sample/LV/agriculture_lv.txt<tab>/home/fzsu/DictMetric/sample/EN/agriculture_en.txt<tab>0.4298
+/home/fzsu/DictMetric/sample/LV/alcohol_lv.txt<tab>/home/fzsu/DictMetric/sample/EN/alcohol_en.txt<tab>0.5065
+
+In windows, its format is as below.
+C:\DictMetric\sample\LV\agriculture_lv.txt<tab>C:\DictMetric\sample\EN\agriculture_en.txt<tab>0.4298
+C:\DictMetric\sample\LV\alcohol_lv.txt<tab>C:\DictMetric\sample\EN\alcohol_en.txt<tab>0.5065
+C:\DictMetric\sample\LV\plant_lv.txt<tab>C:\DictMetric\sample\EN\plant_en.txt<tab>0.575
+
+7. Integration with external tools
+Assuming WordNet has been installed, the external tools in this toolkit include Stanford POS-tagger, JWI (Java WordNet Interface), both of them are java programs and packaged as ".jar" files, thus they have been included in this toolkit and no installation is required.
+
+8. Updates
+(1) MultiThreading has been added in the updated toolkit to improve the processing speed for large-scale comparable corpora.
+
+(2) The toolkit is also provided as the form of API (Metric.jar, see the following section about the calling detail), which allows user to call it within their programs.
+
+(3) The current toolkit provides two different forms executable files: DictMetric.jar and Metric.jar. Metric.jar can be used as API and the two external APIs (edu.mit.jwi_2.1.5_jdk.jar" and "stanford-postagger-2011-05-18.jar") it calls are put separately in the same directory. In DictMetric.jar, the two external APIs have been included during its export process so that the users can use "DictMetrics.jar" directly without dealing with the external APIs it calls. 
+
+9. Toolkit as API
+
+(1) The command line usage of this API (Metric.jar) is the same as the pervious description (replace "DictMetric.jar" with "Metric.jar" in the above command-line examples), the purpose of this API is to allow usage to call the metric directly from command line or in their own java program. Source code is in the folder "src".   
+(2) add "Metric.jar" in the program, also put "edu.mit.jwi_2.1.5_jdk.jar" and "stanford-postagger-2011-05-18.jar" in the same directory as "Metric.jar" because they are external jar files called by "Metric.jar". 
+(3) import "import leeds.cts.nlp.MultiDict" in the program, as "MultiDict" is the only public class (main class) in the jar file. 
+(4) put the folder "dict" and "stopwords" in the current directory of your program, as they are assumed to be in the current dirctory. 
+(5) For language pair contains English, you can call the function "MultiDict.ENTrack()", for language pairs does not involve English, call "MultiDict.NonENTrack()". The parameters for these two functions is given within the source code. 
+For example:
+import leeds.cts.nlp.MultiDict;
+
+MultiDict a=new MultiDict();
+//a.ENTrack("latvian", "english", "/home/fzsu/WordNet-3.0", "/home/fzsu/DicMetric/sample/lv.txt", "/home/fzsu/DicMetric/sample/en.txt", "/home/fzsu/DicMetric/sample/temp", "/home/fzsu/DicMetric/sample/output.txt", 0.1);
+a.NonENTrack("greek", "romanian", "/home/fzsu/WordNet-3.0", "1", "/home/fzsu/DicMetric/el-ro/el.txt", "/home/fzsu/DicMetric/el-ro/ro.txt", "/home/fzsu/DicMetric/el-ro/temp", "/home/fzsu/DicMetric/el-ro/output.txt", 0.1);
+
+10. Contact
+If you find problems or bugs in the toolkit, please report to Fangzhong Su (smlfs@leeds.ac.uk). 
+
+11. Useful references
+(1) Christiane Fellbaum. WordNet: An Electronic Lexical Database. MIT Press, 1998.
+(2) Kristina Toutanova and Christopher D. Manning. 2000. Enriching the Knowledge Sources Used in a Maximum Entropy Part-of-Speech Tagger. In Proceedings of the Joint SIGDAT Conference on Empirical Methods in Natural Language Processing and Very Large Corpora (EMNLP/VLC-2000), pp. 63-70.
+(3) Kristina Toutanova, Dan Klein, Christopher Manning, and Yoram Singer. 2003. Feature-Rich Part-of-Speech Tagging with a Cyclic Dependency Network. In Proceedings of HLT-NAACL 2003, pp. 252-259.
+(4) JWI: http://projects.csail.mit.edu/jwi/
+(5) Franz Josef Och, Hermann Ney. A Systematic Comparison of Various Statistical Alignment Models. Computational Linguistics, volume 29, number 1, pp. 19-51 March 2003. 
+

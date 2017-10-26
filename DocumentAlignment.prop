@@ -1,0 +1,43 @@
+######################################
+# The property file supports comments only at the beginning of lines (do not add comments after statements).
+######################################
+
+### Document Alignment Applications Section
+
+#Ver 2 OK
+#ComMetric
+ComMetric_WN = wordnet-2.1
+ComMetric_Threshold = 0.4
+#'dfki', 'google' or 'bing'
+#'dfki' only now. 'google' and 'bing' do not work anymore (due to changes in their service policy).
+#Be aware that the DFKI API supports only a limited amount of translation pairs. For a full list, please refer to the documentation.
+ComMetric_TranslationAPI = dfki
+ComMetric_TempDir = commetric\tmp
+
+#Ver 2 OK
+#DictMetric
+DictMetric_WN = wordnet-2.1
+DictMetric_Threshold = 0.3
+#option: 0 or 1 (translate non-English languages to English)
+DictMetric_Option = 0
+DictMetric_TempDir = dictmetric\tmp
+
+#Ver 2 OK
+#EMACC
+EMACC_EMLOOPS = 3
+#'D1' or 'D2'
+EMACC_INIDISTRIB = D2
+EMACC_TEQPUPDATETHR = 0.4
+EMACC_LEXALSCORE = 0.4
+#Y2 Review demo, default 3
+EMACC_MAXTARGETALIGNMENTS = 1
+#'giza' or 'comp'
+EMACC_PROBTYPE = giza
+#Y2 Review demo, default generate
+EMACC_CLUSTERFILE = cluster.info
+
+#Feature-based document classifier
+FeatClass_Threshold = 2
+FeatClass_Models = featclass\Model
+
+### End Document Alignment Applications Section

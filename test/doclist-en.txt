@@ -1,0 +1,6 @@
+test\EN\Abraham_Stoker_EN.txt
+test\EN\Acheron_EN.txt
+test\EN\Caucasian_language_EN.txt
+test\EN\Central_Powers_EN.txt
+test\EN\Emily_Bronte_EN.txt
+test\EN\Namib_Desert_EN.txt

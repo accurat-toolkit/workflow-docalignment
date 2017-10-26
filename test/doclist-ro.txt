@@ -1,0 +1,6 @@
+test\RO\Abraham_Stoker_RO.txt
+test\RO\Acheron_RO.txt
+test\RO\Caucasian_language_RO.txt
+test\RO\Central_Powers_RO.txt
+test\RO\Emily_Bronte_RO.txt
+test\RO\Namib_Desert_RO.txt
